@@ -157,7 +157,7 @@ export default async function ProjectPage({
         </h1>
         {/* <p className="mb-8 text-gray-600">{project.description}</p> */}
 
-        <div className="grid gap-8 justify-center">
+        <div className="grid gap-8 justify-center pb-14">
           {project.images.map((image, index) => (
             <div
               key={index}
@@ -180,7 +180,7 @@ export default async function ProjectPage({
 
 const BackToMainPage = () => {
   return (
-    <div className="mx-auto px-0 xs:px-4 sm:px-6 lg:px-8 pt-14 max-w-3xl">
+    <div className="mx-auto px-0 xs:px-4 sm:px-6 lg:px-8 sm:pt-8 max-w-3xl">
       <Link
         href="/"
         className="text-sm text-gray-600 hover:text-gray-900 hover:underline"

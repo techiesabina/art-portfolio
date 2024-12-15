@@ -32,7 +32,7 @@ export function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 z-50 w-full bg-white/80 backdrop-blur-sm">
+    <nav className="fixed top-0 z-50 w-full bg-white/80 backdrop-blur-sm outline:none focus-visible:ring">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <Sparkles>
