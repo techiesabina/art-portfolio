@@ -29,6 +29,28 @@ import VectorGirl13 from "@/assets/v13.jpg";
 import VectorGirl14 from "@/assets/v14.png";
 import VectorGirl15 from "@/assets/v15.png";
 import VectorGirl16 from "@/assets/v16.png";
+
+import HowToFindFriendsCover from "@/assets/how-to-find-friends-book/0.png";
+import HowToFindFriends1 from "@/assets/how-to-find-friends-book/1.png";
+import HowToFindFriends2 from "@/assets/how-to-find-friends-book/2.png";
+import HowToFindFriends3 from "@/assets/how-to-find-friends-book/3.png";
+import HowToFindFriends4 from "@/assets/how-to-find-friends-book/4.png";
+import HowToFindFriends5 from "@/assets/how-to-find-friends-book/5.png";
+import HowToFindFriends6 from "@/assets/how-to-find-friends-book/6.png";
+import HowToFindFriends7 from "@/assets/how-to-find-friends-book/7.png";
+import HowToFindFriends8 from "@/assets/how-to-find-friends-book/8.png";
+import HowToFindFriends9 from "@/assets/how-to-find-friends-book/9.png";
+import HowToFindFriends10 from "@/assets/how-to-find-friends-book/10.png";
+import HowToFindFriends11 from "@/assets/how-to-find-friends-book/11.png";
+import HowToFindFriends12 from "@/assets/how-to-find-friends-book/12.png";
+import HowToFindFriends13 from "@/assets/how-to-find-friends-book/13.png";
+import HowToFindFriends14 from "@/assets/how-to-find-friends-book/14.png";
+import HowToFindFriends15 from "@/assets/how-to-find-friends-book/15.png";
+import HowToFindFriends16 from "@/assets/how-to-find-friends-book/16.png";
+import HowToFindFriends17 from "@/assets/how-to-find-friends-book/17.png";
+import HowToFindFriends18 from "@/assets/how-to-find-friends-book/18.png";
+import HowToFindFriends19 from "@/assets/how-to-find-friends-book/19.png";
+
 import type { PORTFOLIO_ITEMS } from "@/app/consts";
 
 type PortfolioSlugKeys = (typeof PORTFOLIO_ITEMS)[number]["slug"];
@@ -72,6 +94,32 @@ const projects = {
     ],
     // description: "Vector illustrations collection",
   },
+  "how-to-find-friends": {
+    title: "How to find friends?",
+    images: [
+      HowToFindFriendsCover,
+      HowToFindFriends1,
+      HowToFindFriends2,
+      HowToFindFriends3,
+      HowToFindFriends4,
+      HowToFindFriends5,
+      HowToFindFriends6,
+      HowToFindFriends7,
+      HowToFindFriends8,
+      HowToFindFriends9,
+      HowToFindFriends10,
+      HowToFindFriends11,
+      HowToFindFriends12,
+      HowToFindFriends13,
+      HowToFindFriends14,
+      HowToFindFriends15,
+      HowToFindFriends16,
+      HowToFindFriends17,
+      HowToFindFriends18,
+      HowToFindFriends19,
+    ],
+    // description: "A book about how to find friends.",
+  },
 } as const satisfies {
   [key in PortfolioSlugKeys]: {
     title: string;
@@ -101,17 +149,10 @@ export default async function ProjectPage({
 
   return (
     <>
-      <main className="container mx-auto px-4 pt-24 pb-12 sm:px-6 lg:px-8">
-        <div className="mb-8">
-          <Link
-            href="/"
-            className="text-sm text-gray-600 hover:text-gray-900 hover:underline"
-          >
-            ← Back to main page
-          </Link>
-        </div>
+      <main className="container mx-auto px-4 pt-24 sm:px-6 lg:px-8">
+        <BackToMainPage />
 
-        <h1 className="mb-12 text-3xl font-bold uppercase text-center">
+        <h1 className="mb-16 mt-10 text-3xl font-bold uppercase text-center">
           {project.title}
         </h1>
         {/* <p className="mb-8 text-gray-600">{project.description}</p> */}
@@ -131,15 +172,21 @@ export default async function ProjectPage({
             </div>
           ))}
         </div>
-        <div className="my-8">
-          <Link
-            href="/"
-            className="text-sm text-gray-600 hover:text-gray-900 hover:underline"
-          >
-            ← Back to main page
-          </Link>
-        </div>
+        <BackToMainPage />
       </main>
     </>
   );
 }
+
+const BackToMainPage = () => {
+  return (
+    <div className="mx-auto px-0 xs:px-4 sm:px-6 lg:px-8 pt-14 max-w-3xl">
+      <Link
+        href="/"
+        className="text-sm text-gray-600 hover:text-gray-900 hover:underline"
+      >
+        ← Back to main page
+      </Link>
+    </div>
+  );
+};

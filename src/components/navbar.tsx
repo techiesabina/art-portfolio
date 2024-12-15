@@ -8,7 +8,7 @@ import { Sparkles } from "@/components/sparkles";
 
 const menuItems = [
   { label: "MAIN", href: "/" },
-  { label: "INFO", href: "/info" },
+  { label: "ABOUT ME", href: "/info" },
 ] as const satisfies {
   label: string;
   href: string;
@@ -24,7 +24,7 @@ export function Navbar() {
   }
 
   const linkStyles = {
-    base: "transition-colors duration-200",
+    base: "transition-colors duration-200 hover:underline",
     desktop: "px-3 py-2 text-sm",
     mobile: "block px-3 py-2 text-base",
     inactive: "text-gray-900 hover:text-gray-600",
