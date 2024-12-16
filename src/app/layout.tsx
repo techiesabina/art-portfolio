@@ -1,14 +1,80 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+import { Analytics } from "@vercel/analytics/next";
+
+import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Anzhelika Bashirova Portfolio",
-  description: "Anzhelika Bashirova Creative portfolio website",
+  title:
+    "Anzhelika Bashirova Portfolio | Illustrations, Graphic Design, Art and more",
+  description:
+    "Anzhelika Bashirova creative portfolio website with illustrations,graphic design, art and more",
+  keywords: [
+    "portfolio",
+    "creative",
+    "design",
+    "illustration",
+    "art",
+    "graphic design",
+    "digital art",
+    "artwork",
+    "UI/UX",
+    "Anzhelika Bashirova",
+    "Anzhelika Bashirova portfolio",
+    "Anzhelika Bashirova creative",
+    "Anzhelika Bashirova design",
+    "Anzhelika Bashirova illustrator",
+    "Anzhelika Bashirova graphic design",
+    "Anzhelika Bashirova art",
+    "Anzhelika Bashirova digital art",
+  ],
+  authors: [{ name: "Anzhelika Bashirova" }],
+  creator: "Anzhelika Bashirova",
+  publisher: "Anzhelika Bashirova",
+  robots: {
+    index: true,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    title: "Anzhelika Bashirova | Creative Portfolio",
+    description:
+      "Anzhelika Bashirova creative portfolio website with illustrations, graphic design, art and more",
+    siteName: "Anzhelika Bashirova",
+    url: "https://mebashirova.com",
+    images: [
+      {
+        url: "https://mebashirova.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgirl3.de503e13.png&w=1080&q=75",
+        width: 1200,
+        height: 630,
+        alt: "Anzhelika Bashirova | Creative Portfolio",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Anzhelika Bashirova | Creative Portfolio",
+    description:
+      "Anzhelika Bashirova creative portfolio website with illustrations, graphic design, art and more",
+    images: [
+      {
+        url: "https://mebashirova.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgirl3.de503e13.png&w=1080&q=75",
+        width: 1200,
+        height: 630,
+        alt: "Anzhelika Bashirova | Creative Portfolio",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -22,6 +88,7 @@ export default function RootLayout({
         <Navbar />
         <main className="bg-white">{children}</main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
