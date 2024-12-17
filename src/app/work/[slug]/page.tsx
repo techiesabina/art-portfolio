@@ -60,22 +60,19 @@ const projects = {
   "character-design-sasha": {
     title: "Character Design Sasha",
     images: [Girl1, Girl2],
-    ogImageUrl:
-      "https://mebashirova.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgirl1.413430dd.png&w=750&q=75",
+    ogImageUrl: "/og-images/sasha-og.png",
     // description: "A series of illustrations ",
   },
   "character-design-nina": {
     title: "Character Design Nina",
     images: [Girl3],
-    ogImageUrl:
-      "https://mebashirova.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgirl3.de503e13.png&w=1080&q=75",
+    ogImageUrl: "/og-images/nina-og.png",
     // description: "An adventure through the city.",
   },
   "game-cards": {
     title: "Game cards",
     images: [gm1, gm2, gm3, gm5, gm4],
-    ogImageUrl:
-      "http://localhost:3000/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgm1.a11eee29.png&w=1080&q=75",
+    ogImageUrl: "/og-images/game-card-og.png",
     // description: "A collection of friendship moments.",
   },
   "vector-pack": {
@@ -99,8 +96,7 @@ const projects = {
       VectorGirl15,
       VectorGirl16,
     ],
-    ogImageUrl:
-      "http://localhost:3000/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fv9.9ba21868.jpg&w=1080&q=75",
+    ogImageUrl: "/og-images/vector-pack-og.png",
     // description: "Vector illustrations collection",
   },
   "how-to-find-friends": {
@@ -127,8 +123,7 @@ const projects = {
       HowToFindFriends18,
       HowToFindFriends19,
     ],
-    ogImageUrl:
-      "https://mebashirova.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F0.3ce74e82.png&w=1080&q=75",
+    ogImageUrl: "/og-images/how-to-find-friends-og.png",
     // description: "A book about how to find friends.",
   },
 } as const satisfies {
