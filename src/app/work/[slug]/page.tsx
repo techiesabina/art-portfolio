@@ -156,18 +156,15 @@ export async function generateMetadata({
   const project = projects[slug];
 
   if (!project) {
-    return {
-      title: "Project Not Found",
-      description: "The requested project could not be found.",
-    };
+    throw new Error("Project not found");
   }
 
   return {
-    title: `${project.title} | Anzhelika Bashirova Portfolio`,
-    description: `View "${project.title}" project details and illustrations`,
+    title: `${project.title} | Anzhelika Bashirova | Portfolio`,
+    description: `View "${project.title}" project details and illustrations by Anzhelika Bashirova`,
     openGraph: {
       title: project.title,
-      description: `View "${project.title}" project details and illustrations`,
+      description: `View "${project.title}" project details and illustrations by Anzhelika Bashirova`,
       images: [
         {
           url: project?.ogImageUrl,
@@ -177,11 +174,12 @@ export async function generateMetadata({
         },
       ],
       type: "website",
+      siteName: "Anzhelika Bashirova | Portfolio",
     },
     twitter: {
       card: "summary_large_image",
       title: project.title,
-      description: `View "${project.title}" project details and illustrations`,
+      description: `View "${project.title}" project details and illustrations by Anzhelika Bashirova`,
       images: [
         {
           url: project?.ogImageUrl,
