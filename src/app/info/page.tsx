@@ -1,4 +1,69 @@
-import { Fragment } from "react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About | Anzhelika Bashirova Portfolio",
+  description:
+    "Learn more about Anzhelika Bashirova - Illustrator and Graphic Artist based in Warsaw, Poland",
+  keywords: [
+    "portfolio",
+    "creative",
+    "design",
+    "illustration",
+    "art",
+    "graphic design",
+    "Anzhelika Bashirova",
+    "Anzhelika Bashirova portfolio",
+    "Anzhelika Bashirova creative",
+    "Anzhelika Bashirova design",
+    "Anzhelika Bashirova illustrator",
+    "Anzhelika Bashirova graphic design",
+    "Anzhelika Bashirova art",
+    "Anzhelika Bashirova digital art",
+    "Anzhelika Bashirova about me",
+  ],
+  openGraph: {
+    title: "About | Anzhelika Bashirova Portfolio",
+    description:
+      "Learn more about Anzhelika Bashirova - Illustrator and Graphic Artist based in Warsaw, Poland",
+    images: [
+      {
+        url: "https://mebashirova.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgirl3.de503e13.png&w=1080&q=75",
+        width: 1200,
+        height: 630,
+        alt: "Anzhelika Bashirova Portfolio",
+      },
+    ],
+    siteName: "Anzhelika Bashirova",
+    url: "https://mebashirova.com/info",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About | Anzhelika Bashirova Portfolio",
+    description:
+      "Learn more about Anzhelika Bashirova - Illustrator and Graphic Artist based in Warsaw, Poland",
+    images: [
+      {
+        url: "https://mebashirova.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgirl3.de503e13.png&w=1080&q=75",
+        width: 1200,
+        height: 630,
+        alt: "Anzhelika Bashirova Portfolio",
+      },
+    ],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+  alternates: {
+    canonical: "/info",
+  },
+};
 
 export default function InfoPage() {
   return (

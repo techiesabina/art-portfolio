@@ -1,3 +1,4 @@
+import { type Metadata } from "next";
 import { notFound } from "next/navigation";
 import Image, { type StaticImageData } from "next/image";
 import Link from "next/link";
@@ -59,16 +60,22 @@ const projects = {
   "character-design-sasha": {
     title: "Character Design Sasha",
     images: [Girl1, Girl2],
-    // description: "A series of illustrations depicting school life.",
+    ogImageUrl:
+      "https://mebashirova.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgirl1.413430dd.png&w=750&q=75",
+    // description: "A series of illustrations ",
   },
   "character-design-nina": {
     title: "Character Design Nina",
     images: [Girl3],
+    ogImageUrl:
+      "https://mebashirova.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgirl3.de503e13.png&w=1080&q=75",
     // description: "An adventure through the city.",
   },
   "game-cards": {
     title: "Game cards",
     images: [gm1, gm2, gm3, gm5, gm4],
+    ogImageUrl:
+      "http://localhost:3000/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgm1.a11eee29.png&w=1080&q=75",
     // description: "A collection of friendship moments.",
   },
   "vector-pack": {
@@ -92,6 +99,8 @@ const projects = {
       VectorGirl15,
       VectorGirl16,
     ],
+    ogImageUrl:
+      "http://localhost:3000/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fv9.9ba21868.jpg&w=1080&q=75",
     // description: "Vector illustrations collection",
   },
   "how-to-find-friends": {
@@ -118,6 +127,8 @@ const projects = {
       HowToFindFriends18,
       HowToFindFriends19,
     ],
+    ogImageUrl:
+      "https://mebashirova.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F0.3ce74e82.png&w=1080&q=75",
     // description: "A book about how to find friends.",
   },
 } as const satisfies {
@@ -125,6 +136,7 @@ const projects = {
     title: string;
     images: StaticImageData[];
     // description: string;
+    ogImageUrl: string;
   };
 };
 
@@ -132,6 +144,64 @@ export function generateStaticParams() {
   return Object.keys(projects).map((slug) => ({
     slug,
   }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const slug = (await params).slug as keyof typeof projects;
+
+  const project = projects[slug];
+
+  if (!project) {
+    throw new Error("Project not found");
+  }
+
+  return {
+    title: `${project.title} | Anzhelika Bashirova | Portfolio`,
+    description: `View "${project.title}" project details and illustrations by Anzhelika Bashirova`,
+    openGraph: {
+      title: project.title,
+      description: `View "${project.title}" project details and illustrations by Anzhelika Bashirova`,
+      images: [
+        {
+          url: project?.ogImageUrl,
+          width: 1200,
+          height: 630,
+          alt: project.title,
+        },
+      ],
+      type: "website",
+      siteName: "Anzhelika Bashirova | Portfolio",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: project.title,
+      description: `View "${project.title}" project details and illustrations by Anzhelika Bashirova`,
+      images: [
+        {
+          url: project?.ogImageUrl,
+          width: 1200,
+          height: 630,
+          alt: project.title,
+        },
+      ],
+    },
+    robots: {
+      index: true,
+      follow: true,
+      nocache: true,
+      googleBot: {
+        index: true,
+        follow: true,
+      },
+    },
+    alternates: {
+      canonical: `/work/${slug}`,
+    },
+  };
 }
 
 export default async function ProjectPage({
