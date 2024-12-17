@@ -27,7 +27,7 @@ export const metadata: Metadata = {
       "Learn more about Anzhelika Bashirova - Illustrator and Graphic Artist based in Warsaw, Poland",
     images: [
       {
-        url: "https://mebashirova.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgirl3.de503e13.png&w=1080&q=75",
+        url: "/og-images/nina-og.png",
         width: 1200,
         height: 630,
         alt: "Anzhelika Bashirova Portfolio",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
       "Learn more about Anzhelika Bashirova - Illustrator and Graphic Artist based in Warsaw, Poland",
     images: [
       {
-        url: "https://mebashirova.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fgirl3.de503e13.png&w=1080&q=75",
+        url: "/og-images/nina-og.png",
         width: 1200,
         height: 630,
         alt: "Anzhelika Bashirova Portfolio",
