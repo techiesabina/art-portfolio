@@ -3,33 +3,32 @@ import { notFound } from "next/navigation";
 import Image, { type StaticImageData } from "next/image";
 import Link from "next/link";
 
-import Girl1 from "@/assets/girl1.png";
-import Girl2 from "@/assets/girl2.png";
-import Girl3 from "@/assets/girl3.png";
+import SashaGirl1 from "@/assets/sasha/girl1.png";
+import SashaGirl2 from "@/assets/sasha/girl2.png";
+import NinaGirl from "@/assets/nina/girl3.png";
 
-import gm1 from "@/assets/gm1.png";
-import gm2 from "@/assets/gm2.png";
-import gm3 from "@/assets/gm3.png";
-import gm4 from "@/assets/gm4.png";
-import gm5 from "@/assets/gm5.png";
+import GameCardsCover from "@/assets/game-cards/gm1.png";
+import GameCards1 from "@/assets/game-cards/gm2.png";
+import GameCards2 from "@/assets/game-cards/gm3.png";
+import GameCards3 from "@/assets/game-cards/gm4.png";
+import GameCards4 from "@/assets/game-cards/gm5.png";
 
-import VectorGirlCover from "@/assets/v9.jpg";
-import VectorGirl1 from "@/assets/v1.jpg";
-import VectorGirl2 from "@/assets/v2.jpg";
-import VectorGirl3 from "@/assets/v3.jpg";
-import VectorGirl4 from "@/assets/v4.jpg";
-import VectorGirl5 from "@/assets/v5.jpg";
-import VectorGirl6 from "@/assets/v6.jpg";
-import VectorGirl7 from "@/assets/v7.jpg";
-import VectorGirl8 from "@/assets/v8.jpg";
-import VectorGirl9 from "@/assets/v9.jpg";
-import VectorGirl10 from "@/assets/v10.jpg";
-import VectorGirl11 from "@/assets/v11.jpg";
-import VectorGirl12 from "@/assets/v12.jpg";
-import VectorGirl13 from "@/assets/v13.jpg";
-import VectorGirl14 from "@/assets/v14.png";
-import VectorGirl15 from "@/assets/v15.png";
-import VectorGirl16 from "@/assets/v16.png";
+import VectorGirlCover from "@/assets/vector-pack/v9.jpg";
+import VectorGirl1 from "@/assets/vector-pack/v1.jpg";
+import VectorGirl2 from "@/assets/vector-pack/v2.jpg";
+import VectorGirl3 from "@/assets/vector-pack/v3.jpg";
+import VectorGirl4 from "@/assets/vector-pack/v4.jpg";
+import VectorGirl5 from "@/assets/vector-pack/v5.jpg";
+import VectorGirl6 from "@/assets/vector-pack/v6.jpg";
+import VectorGirl7 from "@/assets/vector-pack/v7.jpg";
+import VectorGirl8 from "@/assets/vector-pack/v8.jpg";
+import VectorGirl10 from "@/assets/vector-pack/v10.jpg";
+import VectorGirl11 from "@/assets/vector-pack/v11.jpg";
+import VectorGirl12 from "@/assets/vector-pack/v12.jpg";
+import VectorGirl13 from "@/assets/vector-pack/v13.jpg";
+import VectorGirl14 from "@/assets/vector-pack/v14.png";
+import VectorGirl15 from "@/assets/vector-pack/v15.png";
+import VectorGirl16 from "@/assets/vector-pack/v16.png";
 
 import HowToFindFriendsCover from "@/assets/how-to-find-friends-book/0.png";
 import HowToFindFriends1 from "@/assets/how-to-find-friends-book/1.png";
@@ -52,6 +51,8 @@ import HowToFindFriends17 from "@/assets/how-to-find-friends-book/17.png";
 import HowToFindFriends18 from "@/assets/how-to-find-friends-book/18.png";
 import HowToFindFriends19 from "@/assets/how-to-find-friends-book/19.png";
 
+import SelfPortrait from "@/assets/self-portrait/self-portrait.png";
+
 import type { PORTFOLIO_ITEMS } from "@/app/consts";
 
 type PortfolioSlugKeys = (typeof PORTFOLIO_ITEMS)[number]["slug"];
@@ -59,21 +60,18 @@ type PortfolioSlugKeys = (typeof PORTFOLIO_ITEMS)[number]["slug"];
 const projects = {
   "character-design-sasha": {
     title: "Character Design Sasha",
-    images: [Girl1, Girl2],
-    ogImageUrl: "/og-images/sasha-og.png",
-    // description: "A series of illustrations ",
+    images: [SashaGirl1, SashaGirl2],
+    ogImageUrl: "/assets/og-images/sasha-og.png",
   },
   "character-design-nina": {
     title: "Character Design Nina",
-    images: [Girl3],
-    ogImageUrl: "/og-images/nina-og.png",
-    // description: "An adventure through the city.",
+    images: [NinaGirl],
+    ogImageUrl: "/assets/og-images/nina-og.png",
   },
   "game-cards": {
     title: "Game cards",
-    images: [gm1, gm2, gm3, gm5, gm4],
-    ogImageUrl: "/og-images/game-card-og.png",
-    // description: "A collection of friendship moments.",
+    images: [GameCardsCover, GameCards1, GameCards2, GameCards4, GameCards3],
+    ogImageUrl: "/assets/og-images/game-card-og.png",
   },
   "vector-pack": {
     title: "Vector Pack",
@@ -87,7 +85,6 @@ const projects = {
       VectorGirl6,
       VectorGirl7,
       VectorGirl8,
-      VectorGirl9,
       VectorGirl10,
       VectorGirl11,
       VectorGirl12,
@@ -96,8 +93,7 @@ const projects = {
       VectorGirl15,
       VectorGirl16,
     ],
-    ogImageUrl: "/og-images/vector-pack-og.png",
-    // description: "Vector illustrations collection",
+    ogImageUrl: "/assets/og-images/vector-pack-og.png",
   },
   "how-to-find-friends": {
     title: "How to find friends?",
@@ -123,14 +119,17 @@ const projects = {
       HowToFindFriends18,
       HowToFindFriends19,
     ],
-    ogImageUrl: "/og-images/how-to-find-friends-og.png",
-    // description: "A book about how to find friends.",
+    ogImageUrl: "/assets/og-images/how-to-find-friends-og.png",
+  },
+  "self-portrait": {
+    title: "Self-portrait",
+    images: [SelfPortrait],
+    ogImageUrl: "/assets/og-images/self-portrait.png",
   },
 } as const satisfies {
   [key in PortfolioSlugKeys]: {
     title: string;
     images: StaticImageData[];
-    // description: string;
     ogImageUrl: string;
   };
 };
@@ -158,7 +157,7 @@ export async function generateMetadata({
     title: `${project.title} | Anzhelika Bashirova | Portfolio`,
     description: `View "${project.title}" project details and illustrations by Anzhelika Bashirova`,
     openGraph: {
-      title: project.title,
+      title: `${project.title} | Anzhelika Bashirova | Portfolio`,
       description: `View "${project.title}" project details and illustrations by Anzhelika Bashirova`,
       images: [
         {
@@ -173,7 +172,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: project.title,
+      title: `${project.title} | Anzhelika Bashirova | Portfolio`,
       description: `View "${project.title}" project details and illustrations by Anzhelika Bashirova`,
       images: [
         {
@@ -192,9 +191,6 @@ export async function generateMetadata({
         index: true,
         follow: true,
       },
-    },
-    alternates: {
-      canonical: `/work/${slug}`,
     },
   };
 }

@@ -114,7 +114,7 @@ export function Navbar() {
         className={cn("md:hidden", isOpen ? "block" : "hidden")}
         aria-hidden={!isOpen}
       >
-        <div className="space-y-1 px-2 pb-3 pt-2">
+        <div className="space-y-1 px-2 pb-3 pt-2 shadow-sm">
           {menuItems.map((item) => (
             <Link
               key={item.href}

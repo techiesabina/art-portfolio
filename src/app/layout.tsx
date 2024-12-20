@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     url: "https://mebashirova.com",
     images: [
       {
-        url: "/og-images/nina-og.png",
+        url: "/assets/og-images/nina-og.png",
         width: 1200,
         height: 630,
         alt: "Anzhelika Bashirova | Creative Portfolio",
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
       "Anzhelika Bashirova creative portfolio website with illustrations, graphic design, art and more",
     images: [
       {
-        url: "/og-images/nina-og.png",
+        url: "/assets/og-images/nina-og.png",
         width: 1200,
         height: 630,
         alt: "Anzhelika Bashirova | Creative Portfolio",
