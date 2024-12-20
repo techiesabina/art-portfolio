@@ -3,7 +3,7 @@ import Image from "next/image";
 import AnjiBio from "@/assets/anji-bio.png";
 
 export const metadata: Metadata = {
-  title: "About | Anzhelika Bashirova Portfolio",
+  title: "About me | Anzhelika Bashirova Portfolio",
   description:
     "Learn more about Anzhelika Bashirova - Illustrator and Graphic Artist based in Warsaw, Poland",
   keywords: [
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     "Anzhelika Bashirova about me",
   ],
   openGraph: {
-    title: "About | Anzhelika Bashirova Portfolio",
+    title: "About me | Anzhelika Bashirova Portfolio",
     description:
       "Learn more about Anzhelika Bashirova - Illustrator and Graphic Artist based in Warsaw, Poland",
     images: [
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "About | Anzhelika Bashirova Portfolio",
+    title: "About me | Anzhelika Bashirova Portfolio",
     description:
       "Learn more about Anzhelika Bashirova - Illustrator and Graphic Artist based in Warsaw, Poland",
     images: [
@@ -61,9 +61,6 @@ export const metadata: Metadata = {
       index: true,
       follow: true,
     },
-  },
-  alternates: {
-    canonical: "/info",
   },
 };
 
