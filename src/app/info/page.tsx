@@ -67,7 +67,7 @@ export const metadata: Metadata = {
 export default function InfoPage() {
   return (
     <>
-      <main className="container mx-auto px-4 pt-44 pb-12 sm:px-6 lg:px-8 max-w-6xl">
+      <main className="container mx-auto px-4 pt-28 sm:pt-36 pb-12 sm:px-6 lg:px-8 max-w-6xl">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* left column*/}
           <div className="flex justify-center items-center">
