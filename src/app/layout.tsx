@@ -31,6 +31,10 @@ export const metadata: Metadata = {
     "Anzhelika Bashirova graphic design",
     "Anzhelika Bashirova art",
     "Anzhelika Bashirova digital art",
+    "bashirova",
+    "mebashirova",
+    "Bashirova",
+    "mebashirova.com",
   ],
   authors: [{ name: "Anzhelika Bashirova" }],
   creator: "Anzhelika Bashirova",
@@ -74,6 +78,10 @@ export const metadata: Metadata = {
         alt: "Anzhelika Bashirova | Creative Portfolio",
       },
     ],
+  },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-icon.png",
   },
 };
 
