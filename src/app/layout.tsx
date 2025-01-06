@@ -35,6 +35,7 @@ export const metadata: Metadata = {
     "mebashirova",
     "Bashirova",
     "mebashirova.com",
+    "Anzhelika Bashirova, Illustration, Character Design, Comic, Animation",
   ],
   authors: [{ name: "Anzhelika Bashirova" }],
   creator: "Anzhelika Bashirova",

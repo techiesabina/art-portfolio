@@ -169,6 +169,7 @@ export async function generateMetadata({
       ],
       type: "website",
       siteName: "Anzhelika Bashirova | Portfolio",
+      url: `https://mebashirova.com/work/${slug}`,
     },
     twitter: {
       card: "summary_large_image",
