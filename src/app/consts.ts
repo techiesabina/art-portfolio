@@ -3,6 +3,7 @@ import NinaCover from "@/assets/nina/girl3.png";
 import GameCardsCover from "@/assets/game-cards/gm1.png";
 import HowToFindFriends from "@/assets/how-to-find-friends-book/0.png";
 import SelfPortrait from "@/assets/self-portrait/self-portrait.png";
+import Fam1 from "@/assets/fam/fam1.webp";
 
 import { type StaticImageData } from "next/image";
 
@@ -56,6 +57,14 @@ export const PORTFOLIO_ITEMS = [
     src: SelfPortrait,
     alt: "Self-portrait illustration by Anzhelika Bashirova",
     slug: "self-portrait",
+    type: "image",
+  },
+  {
+    id: getRandomId(),
+    title: "Girl, boy, and the cat",
+    src: Fam1,
+    alt: "Girl, boy, and the cat",
+    slug: "girl-boy-and-the-cat",
     type: "image",
   },
 ] as const satisfies readonly (ImageType | VideoType)[];
