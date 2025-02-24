@@ -53,6 +53,9 @@ import HowToFindFriends19 from "@/assets/how-to-find-friends-book/19.png";
 
 import SelfPortrait from "@/assets/self-portrait/self-portrait.png";
 
+import Fam1 from "@/assets/fam/fam1.webp";
+import Fam2 from "@/assets/fam/fam2.webp";
+
 import type { PORTFOLIO_ITEMS } from "@/app/consts";
 
 type PortfolioSlugKeys = (typeof PORTFOLIO_ITEMS)[number]["slug"];
@@ -125,6 +128,11 @@ const projects = {
     title: "Self-portrait",
     images: [SelfPortrait],
     ogImageUrl: "/assets/og-images/self-portrait.png",
+  },
+  "girl-boy-and-the-cat": {
+    title: "Girl, boy, and the cat",
+    images: [Fam1, Fam2],
+    ogImageUrl: "/assets/og-images/fam-og.png",
   },
 } as const satisfies {
   [key in PortfolioSlugKeys]: {
