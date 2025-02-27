@@ -30,7 +30,7 @@ export const PORTFOLIO_ITEMS = [
     id: getRandomId(),
     title: "Girl, boy, and the cat",
     src: Fam1,
-    alt: "Girl, boy, and the cat",
+    alt: "Digital illustration featuring a girl, boy and cat in a cozy scene showcasing family relationships and companionship",
     slug: "girl-boy-and-the-cat",
     type: "image",
   },

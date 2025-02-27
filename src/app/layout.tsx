@@ -40,6 +40,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Anzhelika Bashirova" }],
   creator: "Anzhelika Bashirova",
   publisher: "Anzhelika Bashirova",
+  metadataBase: new URL("https://mebashirova.com"),
   robots: {
     index: true,
     follow: true,
