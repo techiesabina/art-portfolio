@@ -56,6 +56,11 @@ import SelfPortrait from "@/assets/self-portrait/self-portrait.png";
 import Fam1 from "@/assets/fam/fam1.webp";
 import Fam2 from "@/assets/fam/fam2.webp";
 
+import Baby1 from "@/assets/we-are-babies/baby1.webp";
+import Baby2 from "@/assets/we-are-babies/baby2.webp";
+import Baby3 from "@/assets/we-are-babies/baby3.webp";
+import Baby4 from "@/assets/we-are-babies/baby4.webp";
+
 import type { PORTFOLIO_ITEMS } from "@/app/consts";
 
 type PortfolioSlugKeys = (typeof PORTFOLIO_ITEMS)[number]["slug"];
@@ -133,6 +138,11 @@ const projects = {
     title: "Girl, boy, and the cat",
     images: [Fam1, Fam2],
     ogImageUrl: "/assets/og-images/fam-og.png",
+  },
+  "we-are-babies": {
+    title: "We are babies",
+    images: [Baby1, Baby4, Baby3, Baby2],
+    ogImageUrl: "/assets/og-images/baby-og.png",
   },
 } as const satisfies {
   [key in PortfolioSlugKeys]: {

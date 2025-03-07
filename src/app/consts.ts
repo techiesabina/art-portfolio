@@ -61,6 +61,15 @@ export const PORTFOLIO_ITEMS = [
   },
   {
     id: getRandomId(),
+    title: "We are babies",
+    src: "/babies.mp4",
+    fallbackImg: "/assets/we-are-babies/baby1.webp",
+    alt: "",
+    slug: "we-are-babies",
+    type: "video",
+  },
+  {
+    id: getRandomId(),
     title: "Character Design Nina",
     src: NinaCover,
     alt: "Digital illustration of Nina character design depicting a stylized female character with distinctive features",
